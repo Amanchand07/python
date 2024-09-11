@@ -1,0 +1,527 @@
+#value passing
+a=10
+b=20
+c=30
+print("b value is %d and c value is %d"%(b,c))
+
+
+
+#replacement variable{}
+name="vijay"
+salary=30000
+company="TCS"
+print("hello {0} your salary is {1} and company is {2}".format(name,salary,company))
+print("hello {x} your salary is {y} and company is {z}".format(x=name,y=salary,z=company))
+
+
+#main function in python
+if __name__=='__main__':
+  print("aman")
+
+#loop if you want to execute a block of statement or no of line again and again until the condition is satisfied then we should go for loop.
+#for loop syntax
+a=[10,20,30]
+for x in a:
+  print(x)
+
+
+
+
+
+s="aman chand"
+for x in s:
+  print(x)
+
+
+list=[12,20,30,40]
+print(list)
+for x in list:
+  print(x)
+
+
+
+list=[20,30,10,23]
+for i in range(len(list)):
+  print(list[i])
+
+
+
+for x in range(1,11,2): #start,last,increment/decrement
+  print(x)
+
+
+
+
+sum=0
+for x in range(1,11):
+  sum=sum+x
+print(sum)
+
+
+
+#while loop
+i=0
+while i<=10:
+  print(i)
+  i+=1
+
+
+
+no=int(input("enter the no: "))
+if no%2==0:
+  print("even")
+else:
+  print("odd")
+
+
+
+a=int(input("enter the a no: "))
+b=int(input("enter the b no: "))
+c=int(input("enter the c no: "))
+d=int(input("enter the d no: "))
+e=int(input("enter the e no: "))
+m=a
+
+if b>m:
+  m=b
+if c>m:
+  m=c
+if d>m:
+  m=d
+if e>m:
+  m=e
+print(m)
+
+
+
+
+a=int(input("enter the a no: "))
+b=int(input("enter the b no: "))
+c=int(input("enter the c no: "))
+d=int(input("enter the d no: "))
+e=int(input("enter the e no: "))
+m=a
+
+if b<m:
+  m=b
+if c<m:
+  m=c
+if d<m:
+  m=d
+if e<m:
+  m=e
+print(m)
+
+
+
+
+cp=int(input("enter the cost price: "))
+s=input("are you student (yes/no): ")
+if s=="yes":
+  if cp>500 :
+    ds=cp*0.10
+  else:
+    ds=cp*0.05
+else:
+  if cp>500:
+
+    ds=cp*0.08
+  else:
+    ds=cp*0.02
+td=cp-ds
+print("cost price is: " ,cp)
+print("total discount: " ,ds)
+print("final price is: ",td)
+
+
+
+
+n1=int(input("enter n1: "))
+n2=int(input("enter n2: "))
+n3=int(input("enter n3: "))
+n4=int(input("enter n4: "))
+n5=int(input("enter n5: "))
+gen=input("enter gender(m/f): ")
+total=n1+n2+n3+n4+n5
+per=(total/500)*100
+print(total)
+print(per)
+if per>=82 and gen=="f":
+  print("she can take admission ")
+elif per>=62 and gen=="m":
+  print("he can take admission ")
+else:
+  print("cannot take admission")
+
+
+
+
+
+
+
+#reverse no
+no=int (input("enter the no: "))
+rev=0;
+while no>0:
+  rem=no%10
+  rev=rev*10+rem
+  no=no//10
+print(rev)
+
+
+
+
+#sum of digit
+no=int (input("enter the no: "))
+sum=0;
+while no>0:
+  rem=no%10
+  sum=sum+rem
+  no=no//10
+print(sum)
+
+
+
+
+
+#product of digit
+no=int (input("enter the no: "))
+p=1;
+while no>0:
+  rem=no%10
+  p=p*rem
+  no=no//10
+print(p)
+
+
+
+#count the digits
+no=int (input("enter the no: "))
+c=0;
+while no>0:
+  rem=no%10
+  c+=1
+  no=no//10
+print(c)
+
+
+
+#palindrome no
+no=int (input("enter the no: "))
+n=no
+rev=0;
+while no>0:
+  rem=no%10
+  rev=rev*10+rem
+  no=no//10
+if rev==n:
+   print("it is a palindrome")
+else:
+  print("not a palindrome")
+
+
+
+
+
+#armstrong no
+no=int(input("enter the no: "))
+n=no
+c=0;
+while no>0:
+  rem=no%10
+  c+=1
+  no=no//10
+print(c)
+sum=0
+no=n
+while no>0:
+  rem=no%10
+  sum=sum+(rem**c)
+  no=no//10
+if sum==n:
+  print("armstrong no")
+else:
+  print("not armstrong")
+
+
+
+
+
+for i in range(1,10001):
+  no=i
+  c=0
+  n=no
+  while no>0:
+    rem=no%10
+    c=c+1
+    no=no//10
+  sum=0
+  no=n
+  while no>0:
+    rem=no%10
+    sum=sum+(rem**c)
+    no=no//10
+  if sum==n:
+    print(sum)
+  else:
+    continue
+
+
+
+
+#fabinochi series
+a=0
+b=1
+n=int(input("enter the n: "))
+print(a,"\t",b,end="")
+for i in range(2,n+1):
+  s=a+b
+  a=b
+  b=s
+  print("\t",s,end="")
+
+
+
+
+
+#multiply without *
+a=int(input("enter n1: "))
+b=int(input("enter n2: "))
+res=0
+for x in range(b):
+  res=res+a
+print(res)
+
+
+
+
+sum=1
+n=int(input("enter the range: "))
+x=int(input("enter the x: "))
+for i in range(1,n+1):
+  sum=sum+(x**i)/i
+print(sum)
+
+
+
+
+sum=1
+n=int(input("enter the range: "))
+x=int(input("enter the x: "))
+
+for i in range(1,n+1):
+  fact=1
+  no=i
+  while(no>1):
+    
+    fact=fact*no
+    no=no-1
+  sum=sum+(x**i)/fact
+print(sum)
+
+
+
+
+#Automorphic no
+N=int(input("enter the no: "))
+t=True
+if N<0: 
+	  N=-N 
+sq=N*N 
+while(N>0): 
+	if (N%10!=sq%10): 
+		t=False
+	N//=10
+	sq//=10
+
+if t==True: 
+	print("Automorphic") 
+else: 
+	print("Not Automorphic") 
+
+
+#peterson no
+n=int(input("enter the no: "))
+sum=0
+no=n
+while no>0:
+  rem=no%10
+  fact=1
+  while(rem>1):
+    fact=fact*rem
+    rem=rem-1
+  sum=sum+fact
+  no=no//10
+if sum==n:
+  print("peterson no")
+else:
+  print("not peterson")
+
+
+
+
+#tech no
+n=int(input("enter the no with even digits: "))
+s=str(n)
+l=len(s)
+m=l/2
+ne=n%10**m
+r=n//10**m
+q=ne+r
+a=q*q
+if a==n:
+  print("tech no")
+else:
+  print("not tech")
+
+
+
+
+
+i=1
+j=10
+while i<j:
+  if i==3:
+    i=i+1
+    j=j-1
+  else:
+    print(i," ",j)
+    i=i+1
+    j=j-1
+
+
+
+
+#string handling
+#find function
+s="learning python is very easy"
+print(s.find("python"))
+print(s.find("r"))
+print(s.rfind("r"))
+
+
+
+#count function
+s="abcababcabcabcdda"
+print(s.count('a'))
+print(s.count('ab'))
+print(s.count('a',3,10))
+
+
+
+#replace function
+s="learning python is very easy"
+s1=s.replace("easy","difficult")
+print(s1)
+
+
+
+#split function
+s="learning python is very easy"
+l=s.split()
+print(l)
+for x in l:
+  print(x)
+
+
+
+s="22-2-2024"
+l=s.split("-")
+print(l)
+
+
+
+
+l=['nagpur','pune','mumbai','delhi']
+s=' '.join(l)
+print(s)
+
+
+#upper and lower
+s="learning python is very easy"
+print(s.upper())
+print(s.lower())
+print(s.swapcase())
+print(s.title())
+
+
+
+
+#is function
+print('ashish789'.isalnum())
+print('ashish789'.isdigit())
+print('4562789'.isdigit())
+print('ABC'.isupper())
+print('ABC'.islower())
+print('abc'.islower())
+print("learning python is easy".istitle())
+print(' '.isspace())
+
+
+
+
+
+
+
+#string reverse
+s=input("enter string")
+print(s[::-1])
+
+
+
+#string reverse2
+s=input("enter string")
+print(' '.join(reversed(s)))
+
+
+
+#string reverse3
+s=input("enter string: ")
+rev=""
+for x in s:
+  rev=x+rev
+print(rev)
+
+
+
+#reverse order of word
+s="learning python is very esay"
+s=s.split()
+l=' '.join(reversed(s))
+print(l)
+
+
+
+#removing duplicate
+s="abcdabbcdabbbcccddeeeef"
+l=[]
+for x in s:
+  if x not in l:
+    l.append(x)
+    o=''.join(l)
+print(o)
+
+
+
+#valdi no
+n=input("enter the no: ")
+l=len(n)
+
+if l==10:
+  if n.isdigit():
+    if n.startswith('6') or n.startswith('7') or n.startswith('8') or n.startswith('9'):
+      print("valid no")
+    else:
+      print("not valid in india")
+      
+  else:
+    print("enter digit only ")
+  
+else:
+  print("enter 10 digit no")
+
+
+
+
+
+

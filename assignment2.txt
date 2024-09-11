@@ -1,0 +1,52 @@
+#Automorphic no
+N=int(input("enter the no: "))
+t=True
+if N<0: 
+	  N=-N 
+sq=N*N 
+while(N>0): 
+	if (N%10!=sq%10): 
+		t=False
+	N//=10
+	sq//=10
+
+if t==True: 
+	print("Automorphic") 
+else: 
+	print("Not Automorphic") 
+
+
+
+#peterson no
+n=int(input("enter the no: "))
+sum=0
+no=n
+while no>0:
+  rem=no%10
+  fact=1
+  while(rem>1):
+    fact=fact*rem
+    rem=rem-1
+  sum=sum+fact
+  no=no//10
+if sum==n:
+  print("Peterson no")
+else:
+  print("not Peterson")
+
+
+
+
+#tech no
+n=int(input("enter the no with even digits: "))
+s=str(n)
+l=len(s)
+m=l/2
+ne=n%10**m
+r=n//10**m
+q=ne+r
+a=q*q
+if a==n:
+  print("tech no")
+else:
+  print("not tech")

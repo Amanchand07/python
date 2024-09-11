@@ -1,0 +1,507 @@
+#list data structure
+#insertion order preserved
+#duplicate object allowed
+l=[]
+print(type(l))
+
+
+
+l=eval(input("enter the list: "))
+print(l)
+
+
+
+
+l=list(range(0,11,2))
+print(l)
+
+
+
+
+s="learning python "
+l=s.split()
+print(l)
+
+
+
+s="aman"
+l=list(s)
+print(l)
+
+
+
+list=[11,12,13,14,15]
+print(list[0])
+print(list[-1])
+print(list[2])
+print(list[1:3])
+
+
+
+#traversing list
+n=[0,1,2,3,4,5,6,7,8,9,10]
+i=0
+while i<len(n):
+  print(n[i])
+  i=i+1
+
+
+
+
+n=[1,2,3,4,5,6,7,8,9,10]
+for x in n:
+  print(x)
+
+
+
+
+#list functions
+#1 len()
+n=[10,20,30]
+print(len(n))
+
+
+
+#count function
+n=[1,2,2,3,3,4,1]
+print(n.count(1))
+print(n.count(2))
+print(n.count(3))
+print(n.count(4))
+
+
+
+
+#append()
+l1=[]
+l1.append(10)
+l1.append('a')
+l1.append(3.5)
+print(l1)
+for i in l1:
+  print(l1)
+for x in range(len(l1)):
+  print(l1[x])
+
+
+
+
+
+
+#insert() add data at specific index
+n=[1,2,3,4,5]
+n.insert(1,222)
+print(n)
+n.insert(4,999)
+print(n)
+
+
+
+#extend()
+o1=[11,2,3]
+o2=[13,23,12]
+o1.extend(o2)
+print(o1)
+
+
+
+
+#remove()
+n=[10,20,30,10]
+n.remove(10)
+print(n)
+n.remove(30)
+print(n)
+
+
+
+
+#pop() remove and return the last element of the list
+n=[10,20,30]
+print(n.pop())
+print(n)
+
+
+
+
+#ordering in list
+#reverse() and sort()
+n=[10,20,30,40]
+n.reverse()
+print(n)
+n.sort()
+print(n)
+
+
+
+#concatination(+)
+a=[10,20,30,40]
+b=[40,50,60]
+c=a+b
+print(c)
+c=a*3
+print(c)
+
+
+
+
+#clear()
+n=[10,20,30]
+print(n)
+n.clear()
+print(n)
+print(n.clear())
+
+
+
+
+#nested list()
+n=[10,20,[30,40],50]
+print(n)
+print(n[0])
+print(n[2][1])
+
+
+
+
+#nested list in form or matrix
+n=[[10,20,30],[40,50,60],[70,80,90]]
+print(n)
+print('row wise:')
+for r in n:
+  print(r)
+print('matrix style: ')
+for i in range(len(n)):
+  for j in range(len(n[i])):
+    print(n[i][j],end=" ")
+  print()
+
+
+
+
+
+    n = int(input("Enter the number of semesters: "))
+    
+    sem=[]
+
+    for i in range(n):
+        sub = int(input(f"\nEnter number of subjects in {i + 1} semester: "))
+        sem.append(sub)
+    for i in range(n):
+        print(f"\nMarks obtained in {i + 1} semester:")
+        max_mark = 0   
+        for _ in range(sem[i]):
+            mark = int(input())
+            if not (0 <= mark <= 100):
+                print("\nYou have entered invalid marks.")
+            max_mark = max(max_mark, mark)
+ 
+        print(f"\nMaximum mark in {i + 1} semester: {max_mark}")
+
+
+
+
+
+#arr=[10,20,30,4]
+arr=[]
+n=int(input("enter no of ele: "))
+for i in range(0,n):
+  e=int(input())
+  arr.append(e)
+max=arr[0]
+for x in range(len(arr)):
+  if max<arr[x]:
+    max=arr[x]
+print(max)
+
+
+
+n=int(input("enter the no of ele: "))
+arr=[]
+for i in range(0,n):
+  l=int(input())
+  arr.append(l)
+result = [] 
+
+for i in range(len(arr)):
+    next_element = -1  
+    for j in range(i + 1, n):
+        if arr[j] > arr[i]:
+            next_element = arr[j]
+            break
+    result.append(next_element)
+
+print(result)
+
+
+
+
+
+s="aaabbbbeeeeffggg"
+s1=""
+a1=s[0]
+c=1
+for i in range(1,len(s)):
+  if s[i]==s[i-1]:
+    c+=1
+  else:
+    s1+=s[i-1]+str(c)
+    c=1
+s1+=s[-1]+str(c)
+print(s1)
+
+
+
+
+
+
+#anagram string
+s1=input("enter string s1: ")
+s2=input("enter string s2: ")
+s1.lower()
+s2.lower()
+res1=sorted(s1)
+res2=sorted(s2)
+if res1==res2:
+  print("yes the strings are anagrams")
+  
+else:
+  print("no strings are not anagrams")
+
+
+
+
+
+
+#tuple
+t=()
+print(t)
+t=(10)
+print(t)
+t=(1,2,3,4)
+print(t)
+
+
+
+
+t=(10,20,30,40,50)
+print(t.index(10))
+print(t.index(50))
+
+
+
+t=(40,20,30,10)
+t1=sorted(t)
+print(t1)
+print(t)
+
+
+
+
+
+#min and max function
+t=(40,20,10,50)
+print(min(t))
+print(max(t))
+
+
+
+#cmp 
+import operator
+t1=(10,20,30)
+t2=(40,50,60)
+t3=(10,20,30)
+print(operator.eq(t1,t2))
+print(operator.eq(t1,t3))
+print(operator.eq(t2,t3))
+
+
+
+t=eval(input("enter tuple of no: "))
+l=len(t)
+sum=0
+pr=1
+for x in t:
+  sum=sum+x
+  pr=pr*x
+print(sum)
+print(pr)
+
+
+
+
+
+#cmp 
+from operator import*
+t1=(10,20,30)
+t2=(40,50,60)
+t3=(10,20,30)
+print(eq(t1,t2))
+print(eq(t1,t3))
+print(eq(t2,t3))
+
+
+
+
+
+l=[10,20,10,30,20]
+s=set(l)
+print(s)
+print(type(s))
+l=list(s)
+print(l)
+print(type(l))
+
+
+
+
+s=set(range(5))
+print(s)
+
+
+
+
+#add
+s={10,20,30}
+s.add(40);
+print(s)
+
+
+
+
+
+#copy
+s={10,20,30,40}
+s1=s.copy()
+print(s1)
+
+
+
+
+#pop()
+s={40,10,20,30}
+print(s.pop())
+print(s)
+
+
+
+#remove(x)
+s={10,20,30,40}
+s.remove(20)
+print(s)
+
+
+
+
+
+#clear
+s={10,20,30,40}
+print(s)
+s.clear()
+print(s)
+
+
+
+
+#dictionary
+#d={} or d=dict()
+d={}
+d[100]="aman"
+d[200]="prashant"
+print(d)
+
+
+d={100:'aman',200:'prashant'}
+print(d)
+print(d[100])
+print(d[200])
+
+
+
+rec={}
+n=int(input("enter the no of student: "))
+i=1
+while i<=n:
+  name=input("enter the name: ")
+  marks=input("enter % of the marks: ")
+  rec[name]=marks
+  i=i+1
+print(rec)
+print("name of student","\t","% of marks")
+print("------------------------------------")
+for x in rec:
+  print("\t",x,"\t\t",rec[x])
+
+
+
+
+d={100:'aman',200:"ash",300:'yash'}
+print(d)
+d[100]="john"
+print(d)
+d[400]="raj"
+print(d)
+
+
+
+
+
+d={100:'aman',200:"ash",300:'yash'}
+print(d)
+d[100]="john"
+print(d)
+d[400]="raj"
+print(d)
+del d[400]
+print(d)
+
+
+
+
+d={100:'aman',200:"ash",300:'yash'}
+print(d.get(100))
+print(d.get(400))
+print(d.get(100,"guest"))
+print(d.get(400,"guest"))
+
+
+
+
+
+d={100:'aman',200:"ash",300:'yash'}
+print(d.keys())
+for k in d.keys():
+  print(k)
+
+
+
+
+d={100:'aman',200:"ash",300:'yash'}
+print(d.values())
+for k in d.values():
+  print(k)
+
+
+
+
+
+d={}
+n=int(input("enter the no of items: "))
+i=1
+sum=0
+while i<=n:
+  item=int(input("enter the item no: "))
+  price=int(input("enter the price: "))
+  d[item]=price
+  i=i+1
+for i in d.values():
+  sum+=i
+print(sum)
+
+
+
+
+
+
+
+

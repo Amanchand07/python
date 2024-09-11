@@ -1,0 +1,44 @@
+num1=[1,2,3]
+num2=[2,4,6]
+num3=num1+num2
+print(num3)
+s=set(num3)
+num3=list(s)
+print(num3)
+set1 = set(num1)
+set2 = set(num2)
+uni = set2 - set1
+ans=[sorted(list(uni))]
+print(ans)
+
+
+
+
+
+n=int(input("enter the no: "))
+c=n//4
+if c%4==0:
+  print("true")
+else:
+  print("false")
+
+
+
+
+
+
+    nums=[16,17,4,3,5,2]
+    lead = []
+    maxr = nums[-1]
+    lead.append(maxr)
+    for i in range(len(nums) - 2, -1, -1):
+        if nums[i] > maxr:
+            maxr = nums[i]
+            lead.append(maxr)
+    lead.reverse()
+    print(lead)
+
+
+
+
+

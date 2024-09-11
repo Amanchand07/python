@@ -1,0 +1,9 @@
+#accept email id and check weather it is valid or not
+import re
+n=input("enter the email")
+reg= r'\b[A-Za-z0-9._%+-]+@gmail+\.com\b'
+if(re.fullmatch(reg, n)):
+		print("Valid Email")
+
+else:
+		print("Invalid Email")
